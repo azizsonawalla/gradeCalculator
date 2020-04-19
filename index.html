@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head> 
+	<title>Calculator</title>
+</head>
+<script>
+	function test(){
+		var mt1Grade = document.getElementById("mt1").value;
+		var mt2Grade = document.getElementById("mt2").value;
+		var ass1grade = document.getElementById("ass1").value;
+		var ass2grade = document.getElementById("ass2").value;
+		var ass3grade = document.getElementById("ass3").value;
+		var ass4grade = document.getElementById("ass4").value;
+		var ass5grade = document.getElementById("ass5").value;
+		var ass6grade = document.getElementById("ass6").value;
+		var tutGrade = document.getElementById("tut").value;
+		var tutWeighted = (tutGrade / 11) * 0.07;
+		var mtWeighted = ((mt1Grade * 0.01 + mt2Grade * 0.01) / 2 ) * 0.46;
+		var assignmentWeighted = ((ass1grade * 0.01 + ass2grade * 0.01 + ass3grade * 0.01 + ass4grade * 0.01 + ass5grade * 0.01 + ass6grade * 0.01) / 6 ) * 0.42;
+		var finalGrade = ((mtWeighted + assignmentWeighted + tutWeighted) * 100).toFixed(1);
+		document.getElementById("grade").innerHTML = finalGrade;
+	}
+</script>
+<body>
+<form action="" id="formInput" onsubmit="return false;">
+  <label for="fname">MT1 Grade:</label><br>
+  <input type="text" id="mt1" name="fname" value="0" onkeyup="test();"><br>
+  <label for="lname">MT2 Grade:</label><br>
+  <input type="text" id="mt2" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Assignment 1 Grade:</label><br>
+  <input type="text" id="ass1" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Assignment 2 Grade:</label><br>
+  <input type="text" id="ass2" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Assignment 3 Grade:</label><br>
+  <input type="text" id="ass3" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Assignment 4 Grade:</label><br>
+  <input type="text" id="ass4" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Assignment 5 Grade:</label><br>
+  <input type="text" id="ass5" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Assignment 6 Grade:</label><br>
+  <input type="text" id="ass6" name="lname" value="0" onkeyup="test();"><br><br>
+  <label for="lname">Tutorial participation out of 11:</label><br>
+  <input type="text" id="tut" name="lname" value="0" onkeyup="test();"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+</body>
+<p>Final grade: <span id="grade"> </span> % </p>
+</html>
