@@ -12,10 +12,10 @@
     var ass2grade = document.getElementById("ass2").value / 42;
     var ass3grade = document.getElementById("ass3").value / 33;
     var ass4grade = document.getElementById("ass4").value / 48;
-    var ass5grade = document.getElementById("ass5").value / 15;
+    var ass5grade = document.getElementById("ass5").value / 40;
     var ass6grade = document.getElementById("ass6").value / 49;
     var finalExam = document.getElementById("finalExam").value / 100;  // a 'what-if' grade for the final. 0 if you skip.
-    var tutGrade = document.getElementById("tut").value / 11;
+    var tutGrade = document.getElementById("tut").value / 9;
 
     var mtGrade = ((mt1Grade + mt2Grade) / 2 )
     var assGrade = ((ass1grade + ass2grade + ass3grade + ass4grade + ass5grade + ass6grade) / 6 )
@@ -44,11 +44,11 @@
   <input type="text" id="ass3" name="lname" value="0" onkeyup="test();"><br><br>
   <label for="lname">Assignment 4 Grade (out of 48):</label>
   <input type="text" id="ass4" name="lname" value="0" onkeyup="test();"><br><br>
-  <label for="lname">Assignment 5 Grade (out of 15):</label>
+  <label for="lname">Assignment 5 Grade (code out of 25 + written answers out of 15):</label>
   <input type="text" id="ass5" name="lname" value="0" onkeyup="test();"><br><br>
   <label for="lname">Assignment 6 Grade (out of 49):</label>
   <input type="text" id="ass6" name="lname" value="0" onkeyup="test();"><br><br>
-  <label for="lname">Tutorial participation (out of 11):</label>
+  <label for="lname">Tutorial participation (out of 9, 2 are dropped):</label>
   <input type="text" id="tut" name="lname" value="0" onkeyup="test();"><br><br>
   <label for="lname">Final Exam 'what-if' grade (out of 100). Put 0 if you plan to skip:</label>
   <input type="text" id="finalExam" name="lname" value="0" onkeyup="test();"><br><br>
